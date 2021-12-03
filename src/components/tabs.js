@@ -9,7 +9,6 @@ const Tabs = (topics) => {
     tab.textContent = `${topics[i]}`;
     topicsTab.appendChild(tab);
   }
-
   return topicsTab;
 };
 
@@ -32,10 +31,8 @@ const tabsAppender = (selector) => {
   axios
     .get("http://localhost:5000/api/topics")
     .then((response) => {
-      const completedTopics = Tabs(response.data);
-      console.log(response.data);
-      const topicsEntry = document.querySelector(`${selector}`);
-      topicsEntry.appendChild(completedTopics);
+      const topicsEntry = document.querySelector(selector);
+      topicsEntry.appendChild(Tabs(response.data.topics));
     })
     .catch((error) => {
       console.error(error);

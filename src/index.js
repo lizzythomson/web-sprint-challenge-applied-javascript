@@ -4,7 +4,6 @@
 import { cardAppender } from "./components/card";
 import { tabsAppender } from "./components/tabs";
 import { headerAppender } from "./components/header";
-import axios from "axios";
 
 headerAppender(".header-container");
 tabsAppender(".tabs-container");

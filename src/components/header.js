@@ -33,7 +33,7 @@ const Header = (title, date, temp) => {
 
 const headerAppender = (selector) => {
   const fridayHeader = Header(
-    "Winter Storm Provides A White Christmas",
+    "Winter Storm = A White Christmas",
     "December 3, 2021",
     "25F"
   );

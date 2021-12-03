@@ -50,7 +50,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes to the *main* branch.
+- [ ] Submit via Codegrade by committing and pushing any new changes to the _main_ branch.
 - [ ] Check Codegrade for automated feedback.
 - [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
 - [ ] Any changes pushed after the deadline will not receive any feedback.
@@ -60,7 +60,21 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Demonstrate your understanding of this week's concepts by answering the following questions:
 
 1. What is the DOM?
+
+The Document Object Model(DOM) is a representation of the HTML elements of a webpage
+
 2. What is an event?
+
+An event is a interaction with a website (ie click, mouseover, keydown, etc.)
+
 3. What is an event listener?
+
+An event listener is the tracking process of events (as known as "triggers") when those events happens and what action will be taken because of it.
+
 4. Why would we convert a NodeList into an Array?
+
+A NodeList is "array like", but lacks a broader selection of methods. Converting the NodeList to an array allows us to utilize all array methods.
+
 5. What is a component?
+
+A component is a singular modular piece of code that usually consists of JS, HTML, and CSS that can be reused over and over again.

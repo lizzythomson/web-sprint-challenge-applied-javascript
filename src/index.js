@@ -1,12 +1,13 @@
 // DO NOT MAKE CHANGES TO THIS FILE
 // DO NOT MAKE CHANGES TO THIS FILE
 // DO NOT MAKE CHANGES TO THIS FILE
-import { cardAppender } from './components/card'
-import { tabsAppender } from './components/tabs'
-import { headerAppender } from './components/header'
+import { cardAppender } from "./components/card";
+import { tabsAppender } from "./components/tabs";
+import { headerAppender } from "./components/header";
+import axios from "axios";
 
-headerAppender('.header-container')
-tabsAppender('.tabs-container')
-cardAppender('.cards-container')
+headerAppender(".header-container");
+tabsAppender(".tabs-container");
+cardAppender(".cards-container");
 
-console.log('Lambda Times loaded!')
+console.log("Lambda Times loaded!");

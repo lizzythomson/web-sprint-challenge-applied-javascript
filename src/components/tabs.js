@@ -2,7 +2,7 @@ import axios from "axios";
 
 const Tabs = (topics) => {
   const topicsTab = document.createElement("div");
-
+  topicsTab.className = "topics";
   for (let i = 0; i < topics.length; i++) {
     const tab = document.createElement("div");
     tab.classList = "tab";

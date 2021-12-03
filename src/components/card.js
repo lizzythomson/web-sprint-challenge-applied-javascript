@@ -24,7 +24,7 @@ const Card = (article) => {
   cardAuthorName.textContent = article.authorName;
 
   card.addEventListener("click", () => {
-    console.log(cardHeadline);
+    console.log(cardHeadline.textContent);
   });
 
   return card;
@@ -53,9 +53,25 @@ const cardAppender = (selector) => {
   axios
     .get("http://localhost:5000/api/articles")
     .then((response) => {
-      console.log(response.data.articles);
+      const indexArr = [];
+      const articleTopicLength = [];
+      Object.keys(response.data.articles).forEach(function (key) {
+        indexArr.push(key);
+      });
+
+      indexArr.forEach((item) => {
+        articleTopicLength.push(response.data.articles[item].length);
+      });
+
       const articleEntry = document.querySelector(selector);
-      articleEntry.appendChild(Card(response.data.articles));
+
+      for (let i = 0; i < indexArr.length; i++) {
+        for (let j = 0; j < articleTopicLength[i]; j++) {
+          articleEntry.appendChild(
+            Card(response.data.articles[indexArr[i]][j])
+          );
+        }
+      }
     })
     .catch((error) => {
       console.error(error);
